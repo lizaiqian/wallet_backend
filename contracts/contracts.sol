@@ -46,7 +46,6 @@ pragma solidity ^0.4.24;
 contract ParrentAddress {
 
   mapping(address => uint) balanceOf;
-  mapping(address => mapping(address => uint)) transactionInfo;
   address manager;
 
   event eventCharge(address chargeAddr);

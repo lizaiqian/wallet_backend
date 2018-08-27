@@ -14,24 +14,31 @@ const provider = new HDWalletProvider(mnemonic, network);
 const web3 = new Web3(provider);
 const contract = new web3.eth.Contract(abi, address);
 /* GET users listing. */
+
+//为用户生成子地址，如果存在直接获取
 router.get('/address/:id', async (req, res, next) => {
     const id = req.params.id;
-    const findUser = await User.findOne({uid: id});
+    let findUser;
+    try { findUser = await User.findOne({uid: id});} catch (e) {res.fail("id无效");return;}
 
     if(findUser !== null) {
         res.success(findUser.address);
     } else {
-        const account = web3.eth.accounts.create();
-        const user = new User({uid: id, address: account.address, privateKey: account.privateKey});
+        web3.setProvider(new HDWalletProvider(mnemonic, network, id));
+        const account = (await web3.eth.getAccounts())[0];
+        const user = new User({uid: id, address: account});
         await user.save();
-        res.success(account.address);
+        res.success(account);
     }
 
 });
 
+//获取账户余额
 router.get('/balance/:id', async (req, res, next) => {
     const id = req.params.id;
-    const findUser = await User.findOne({uid: id});
+    let findUser;
+    try { findUser = await User.findOne({uid: id});} catch (e) {res.fail("id无效");return;}
+
     if(findUser === null) {
         res.fail("无法找到该用户id");
         return;
@@ -40,9 +47,12 @@ router.get('/balance/:id', async (req, res, next) => {
     res.success(userBalance);
 });
 
+//用户的交易信息
 router.get('/transactions/:id', async (req, res, next) => {
     const id = req.params.id;
-    const findUser = await User.findOne({uid: id});
+    let findUser;
+    try { findUser = await User.findOne({uid: id});} catch (e) {res.fail("id无效");return;}
+
     if(findUser === null) {
         res.fail("无法找到该用户id");
         return;
@@ -50,16 +60,18 @@ router.get('/transactions/:id', async (req, res, next) => {
     res.success(findUser.transactionHash);
 });
 
+//充值
 router.post('/charge', async (req, res, next) => {
 
     const uid = req.body.id;
     const value = req.body.value;
-    const findUser = await User.findOne({uid: uid});
+    let findUser;
+    try { findUser = await User.findOne({uid: id});} catch (e) {res.fail("id无效");return;}
+
     if(findUser === null) {
         res.fail("无法找到该用户id");
         return;
     }
-
 });
 
 module.exports = router;
