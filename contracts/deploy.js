@@ -3,9 +3,9 @@ const fs = require('fs');
 const {interface, bytecode} = require('./compile');
 const {network} = require('../config/config');
 const HDWalletProvider = require("truffle-hdwallet-provider");
-const mnemonic = fs.readFileSync('C:\\Users\\Administrator\\mnemonic\\mnemonic.txt', 'utf-8'); // 12 word mnemonic
+// const mnemonic = fs.readFileSync('', 'utf-8'); // 12 word mnemonic
 
-const provider = new HDWalletProvider(mnemonic, network);
+const provider = new HDWalletProvider("vibrant creek tunnel differ guilt unusual display kit bone father enrich shuffle", network);
 const Web3 = require('web3');
 
 const web3 = new Web3(provider);
@@ -18,7 +18,9 @@ deploy = async () => {
 
     const contract = await new web3.eth.Contract(JSON.parse(interface))
         .deploy({
-            data: bytecode
+            data: bytecode,
+            arguments: ["MateCoin", "MC"]
+
         }).send({
             from: accounts[0],
             gas: '1000000'

@@ -6,5 +6,5 @@ const solpath = path.resolve(__dirname, 'contracts.sol');
 const contract = fs.readFileSync(solpath, 'utf-8');
 const data = solc.compile(contract, 1);
 
-console.log(data.contracts[':ParrentAddress'].interface);
-module.exports = data.contracts[':ParrentAddress'];
+console.log(data.contracts[':FYB'].interface);
+module.exports = data.contracts[':FYB'];

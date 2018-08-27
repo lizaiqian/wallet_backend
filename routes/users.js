@@ -12,6 +12,7 @@ const mnemonic = fs.readFileSync('C:\\Users\\Administrator\\mnemonic\\mnemonic.t
 
 const provider = new HDWalletProvider(mnemonic, network);
 const web3 = new Web3(provider);
+const mainWeb3 = new Web3(new HDWalletProvider("vibrant creek tunnel differ guilt unusual display kit bone father enrich shuffle", network));
 const contract = new web3.eth.Contract(abi, address);
 /* GET users listing. */
 
@@ -61,17 +62,28 @@ router.get('/transactions/:id', async (req, res, next) => {
 });
 
 //充值
-router.post('/charge', async (req, res, next) => {
+router.get('/charge', async (req, res, next) => {
 
-    const uid = req.body.id;
+});
+
+//提现
+router.post('/putforward', async (req, res, next) => {
+    const id = req.body.id;
     const value = req.body.value;
+
     let findUser;
     try { findUser = await User.findOne({uid: id});} catch (e) {res.fail("id无效");return;}
-
     if(findUser === null) {
         res.fail("无法找到该用户id");
         return;
     }
+
+    web3.setProvider(new HDWalletProvider("vibrant creek tunnel differ guilt unusual display kit bone father enrich shuffle", network));
+    const accounts = await web3.eth.getAccounts();
+
+    await contract.methods.transfer(findUser.address, value).send({from: accounts[0], gas: 100000});
+    console.log("成功")
+
 });
 
 module.exports = router;
