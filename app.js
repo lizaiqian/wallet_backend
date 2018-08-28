@@ -1,6 +1,5 @@
 const createError = require('http-errors');
 require('./db');
-// require('./watchBalance');
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
@@ -8,10 +7,7 @@ const logger = require('morgan');
 const bodyParser = require('body-parser')
 const app = express();
 
-// view engine setup
-// app.set('views', path.join(__dirname, 'views'));
-// app.set('view engine', 'pug');
-
+const transferEvent = require('./event/watchTransaction');
 
 app.use(require("./midware/responseMid"));
 app.use(logger('dev'));

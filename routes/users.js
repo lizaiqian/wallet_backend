@@ -1,7 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 const router = express.Router();
-const User = require('../model/user');
+const User = require('../model/users');
 const address = require('../contracts/address/address');
 const abi = require('../contracts/abi/abi');
 
@@ -44,7 +44,7 @@ router.get('/balance/:id', async (req, res, next) => {
         res.fail("无法找到该用户id");
         return;
     }
-    const userBalance = await contract.methods.getBalanceOf(findUser.address).call({from: findUser.address});
+    const userBalance = await contract.methods.balanceOf(findUser.address).call({from: findUser.address});
     res.success(userBalance);
 });
 
@@ -82,7 +82,7 @@ router.post('/putforward', async (req, res, next) => {
     const accounts = await web3.eth.getAccounts();
 
     await contract.methods.transfer(findUser.address, value).send({from: accounts[0], gas: 100000});
-    console.log("成功")
+    console.log("成功");
 
 });
 

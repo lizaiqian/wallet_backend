@@ -14,5 +14,5 @@ const userSchema = new Schema({
     // keyStore: String
 });
 
-const User = mongoose.model("user", userSchema);
-module.exports = User;
+const Users = mongoose.model("user", userSchema);
+module.exports = Users;

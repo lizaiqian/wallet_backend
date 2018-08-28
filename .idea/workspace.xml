@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee093c68-4ec0-4915-befd-2a614bea322e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/watchBalance.js" afterDir="false" />
+    <list default="true" id="ee093c68-4ec0-4915-befd-2a614bea322e" name="Default Changelist" comment="watch event">
+      <change afterPath="$PROJECT_DIR$/event/watchTransaction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/users.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/abi/abi.js" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/abi/abi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/address/address.js" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/address/address.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/compile.js" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/compile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/contracts.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/contracts.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/deploy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/users.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/watchBalance.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,18 +22,19 @@
     <session id="956731280">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.37" value="1" />
           <entry key="project.open.time.42" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="1" />
-          <entry key="js" value="35" />
-          <entry key="json" value="2" />
-          <entry key="sol" value="10" />
+          <entry key="js" value="45" />
+          <entry key="json" value="3" />
+          <entry key="sol" value="11" />
           <entry key="ts" value="5" />
           <entry key="www" value="1" />
         </counts>
@@ -43,23 +42,23 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="1" />
-          <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="36" />
-          <entry key="Solidity file" value="10" />
+          <entry key="JSON" value="3" />
+          <entry key="JavaScript" value="46" />
+          <entry key="Solidity file" value="11" />
           <entry key="TypeScript" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="4824" />
+          <entry key="js" value="6890" />
           <entry key="sol" value="75" />
-          <entry key="txt" value="2" />
+          <entry key="txt" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="4824" />
-          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="JavaScript" value="6890" />
+          <entry key="PLAIN_TEXT" value="21" />
           <entry key="Solidity file" value="75" />
         </counts>
       </usages-collector>
@@ -72,47 +71,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-594">
-              <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/contracts/abi/abi.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="1" column="21" lean-forward="true" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/contracts/compile.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="39" lean-forward="true" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/contracts/contracts.sol">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/routes/users.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1485">
-              <caret line="14" column="139" selection-start-line="14" selection-start-column="139" selection-end-line="14" selection-end-column="139" />
+            <state relative-caret-position="216">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -142,7 +105,6 @@
       <list>
         <option value="$PROJECT_DIR$/midware/responseMid.js" />
         <option value="$PROJECT_DIR$/routes/wallet.js" />
-        <option value="$PROJECT_DIR$/db.js" />
         <option value="$PROJECT_DIR$/contract/abi.js" />
         <option value="$PROJECT_DIR$/contract/address.js" />
         <option value="$PROJECT_DIR$/contracts/abi/abi.js" />
@@ -151,7 +113,13 @@
         <option value="$PROJECT_DIR$/contracts/compile.js" />
         <option value="$PROJECT_DIR$/contracts/deploy.js" />
         <option value="$PROJECT_DIR$/contracts/contracts.sol" />
+        <option value="$PROJECT_DIR$/db.js" />
         <option value="$PROJECT_DIR$/watchBalance.js" />
+        <option value="$PROJECT_DIR$/service/user.js" />
+        <option value="$PROJECT_DIR$/service/users.js" />
+        <option value="$PROJECT_DIR$/watchTransaction.js" />
+        <option value="$PROJECT_DIR$/event/watchTransaction.js" />
+        <option value="$PROJECT_DIR$/watch/watchAccount.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/routes/users.js" />
       </list>
@@ -192,6 +160,7 @@
     <panes>
       <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -202,19 +171,7 @@
             <path>
               <item name="walletBackend" type="b2602c69:ProjectViewProjectNode" />
               <item name="walletBackend" type="462c0819:PsiDirectoryNode" />
-              <item name="contracts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="walletBackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="walletBackend" type="462c0819:PsiDirectoryNode" />
-              <item name="contracts" type="462c0819:PsiDirectoryNode" />
-              <item name="abi" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="walletBackend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="walletBackend" type="462c0819:PsiDirectoryNode" />
-              <item name="contracts" type="462c0819:PsiDirectoryNode" />
-              <item name="address" type="462c0819:PsiDirectoryNode" />
+              <item name="event" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="walletBackend" type="b2602c69:ProjectViewProjectNode" />
@@ -224,13 +181,22 @@
             <path>
               <item name="walletBackend" type="b2602c69:ProjectViewProjectNode" />
               <item name="walletBackend" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="walletBackend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="walletBackend" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="walletBackend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="walletBackend" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -238,7 +204,7 @@
     <property name="SearchEverywhereHistoryKey" value="Subscription&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535371178699" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535451313958" />
     <property name="javascript.nodejs.core.library.configured.version" value="8.11.4" />
     <property name="js.last.introduce.type" value="CONST" />
     <property name="nodejs_interpreter_path" value="node" />
@@ -246,16 +212,17 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="ts.external.directory.path" value="F:\software\IntelliJ IDEA 2018.2.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\code\walletBackend\event" />
+      <recent name="F:\code\walletBackend" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\code\walletBackend\contract" />
       <recent name="F:\code\walletBackend\midware" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\code\walletBackend" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -274,28 +241,33 @@
     <configuration name="app.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="app.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
-    <configuration name="compile.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="compile.js" working-dir="$PROJECT_DIR$/contracts">
+    <configuration name="db.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="db.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <configuration name="deploy.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="deploy.js" working-dir="$PROJECT_DIR$/contracts">
       <method v="2" />
     </configuration>
-    <configuration name="watchBalance.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="watchBalance.js" working-dir="$PROJECT_DIR$">
+    <configuration name="watchAccount.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="watchAccount.js" working-dir="$PROJECT_DIR$/watch">
+      <method v="2" />
+    </configuration>
+    <configuration name="watchTransaction.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/event/watchTransaction.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Node.js.bin\www" />
       <item itemvalue="Node.js.app.js" />
-      <item itemvalue="Node.js.compile.js" />
       <item itemvalue="Node.js.deploy.js" />
-      <item itemvalue="Node.js.watchBalance.js" />
+      <item itemvalue="Node.js.watchTransaction.js" />
+      <item itemvalue="Node.js.db.js" />
+      <item itemvalue="Node.js.watchAccount.js" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Node.js.app.js" />
-        <item itemvalue="Node.js.watchBalance.js" />
+        <item itemvalue="Node.js.watchTransaction.js" />
+        <item itemvalue="Node.js.watchAccount.js" />
+        <item itemvalue="Node.js.db.js" />
         <item itemvalue="Node.js.deploy.js" />
-        <item itemvalue="Node.js.compile.js" />
       </list>
     </recent_temporary>
   </component>
@@ -310,7 +282,8 @@
       <option name="presentableId" value="Default" />
       <updated>1535073453179</updated>
       <workItem from="1535073488643" duration="22280000" />
-      <workItem from="1535332510262" duration="19253000" />
+      <workItem from="1535332510262" duration="19518000" />
+      <workItem from="1535419020809" duration="24226000" />
     </task>
     <task id="LOCAL-00001" summary="11">
       <created>1535360232738</created>
@@ -319,17 +292,24 @@
       <option name="project" value="LOCAL" />
       <updated>1535360232738</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="提现">
+      <created>1535371222903</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1535371222903</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41533000" />
+    <option name="totallyTimeSpent" value="66024000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -339,7 +319,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39413682" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30401736" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -347,7 +327,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.329718" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32899022" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -368,7 +348,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="11" />
-    <option name="LAST_COMMIT_MESSAGE" value="11" />
+    <MESSAGE value="提现" />
+    <option name="LAST_COMMIT_MESSAGE" value="提现" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/routes/index.js" />
@@ -400,20 +381,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/web3/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -424,13 +395,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="16" column="53" lean-forward="true" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contracts/address/address.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="59" selection-start-column="17" selection-end-column="59" />
         </state>
       </provider>
     </entry>
@@ -448,52 +412,83 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/watchBalance.js">
+    <entry file="file://$PROJECT_DIR$/contracts/contracts.sol">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+        <state relative-caret-position="-216">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contracts/contracts.sol">
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contracts/abi/abi.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/event/watchTransaction.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="22" column="45" lean-forward="true" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/watch/watchAccount.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="40" lean-forward="true" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="84" column="22" lean-forward="true" selection-start-line="84" selection-start-column="22" selection-end-line="84" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/contracts/compile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
-          <caret line="6" column="39" lean-forward="true" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contracts/abi/abi.js">
+    <entry file="file://$PROJECT_DIR$/contracts/address/address.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" column="21" lean-forward="true" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+        <state>
+          <caret column="59" selection-start-column="17" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-594">
-          <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1485">
-          <caret line="14" column="139" selection-start-line="14" selection-start-column="139" selection-end-line="14" selection-end-column="139" />
+        <state relative-caret-position="216">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
