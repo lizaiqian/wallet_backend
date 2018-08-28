@@ -13,6 +13,7 @@ const mnemonic = fs.readFileSync('C:\\Users\\Administrator\\mnemonic\\mnemonic.t
 const provider = new HDWalletProvider(mnemonic, network);
 const web3 = new Web3(provider);
 const mainWeb3 = new Web3(new HDWalletProvider("vibrant creek tunnel differ guilt unusual display kit bone father enrich shuffle", network));
+const mainAccounts = mainWeb3.eth.getAccounts();
 const contract = new web3.eth.Contract(abi, address);
 /* GET users listing. */
 
@@ -70,7 +71,9 @@ router.get('/charge', async (req, res, next) => {
 router.post('/putforward', async (req, res, next) => {
     const id = req.body.id;
     const value = req.body.value;
+    const address = req.body.address;
 
+    //获取用户信息
     let findUser;
     try { findUser = await User.findOne({uid: id});} catch (e) {res.fail("id无效");return;}
     if(findUser === null) {
@@ -78,11 +81,28 @@ router.post('/putforward', async (req, res, next) => {
         return;
     }
 
-    web3.setProvider(new HDWalletProvider("vibrant creek tunnel differ guilt unusual display kit bone father enrich shuffle", network));
-    const accounts = await web3.eth.getAccounts();
+    //子账户的钱充入主账户
+    try {
+        web3.setProvider(new HDWalletProvider(mnemonic, network, id));
+        console.log(findUser.address);
+        const balance = await contract.methods.balanceOf(findUser.address).call({from: findUser.address});
+        console.log(balance);
+        await contract.methods.transfer(mainAccounts[0], balance).send({from: findUser.address, gas: 100000});
+    } catch (e) {
+        console.log(e);
+        res.fail("没有足够的以太币支付gas, 提现失败");
+        return;
+    }
 
-    await contract.methods.transfer(findUser.address, value).send({from: accounts[0], gas: 100000});
-    console.log("成功");
+    //主账户提现到用户账户
+    try {
+        web3.setProvider(new HDWalletProvider("vibrant creek tunnel differ guilt unusual display kit bone father enrich shuffle", network));
+        await contract.methods.transfer(address, value).send({from: mainAccounts[0], gas: 100000});
+        console.log("成功");
+    } catch (e) {
+        res.fail("账户提现失败")
+        return;
+    }
 
 });
 
