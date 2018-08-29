@@ -5,6 +5,11 @@ const createUser = async (id, address) => {
     await user.save();
 };
 
+const mainAccount = async () => {
+    const user = await User.findOne({uid: 0});
+    return user.address;
+}
+
 const findById = async (id) => {
     return await User.findOne({uid: id});
 };
@@ -16,6 +21,7 @@ const findByAddress = async (address) => {
 module.exports = {
     createUser,
     findById,
-    findByAddress
+    findByAddress,
+    mainAccount
 };
 

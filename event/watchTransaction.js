@@ -17,12 +17,12 @@ const transferEvent = contract.events.Transfer({},{
         userService.findByAddress(event.returnValues.to).then((user) => {
             // console.log(user);
             if(user !== null) {
-                http.get(`localhost?to=${event.returnValues.to}&value=${event.returnValues.value}`, function (res) {
-                    if(res.statusCode !== 200) {
-                        error = new Error("请求失败");
-                        console.error(error);
-                    }
-                })
+                // http.get(`localhost?to=${event.returnValues.to}&value=${event.returnValues.value}`, function (res) {
+                //     if(res.statusCode !== 200) {
+                //         error = new Error("请求失败");
+                //         console.error(error);
+                //     }
+                // })
             }
         }).catch(e => {
             console.error(e);
